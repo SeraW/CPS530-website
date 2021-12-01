@@ -22,7 +22,7 @@
             </a>
                 <ul class="right hide-on-med-and-down">
                     <li class="active"><a href="">Frameworks</a></li>
-                    <li><a href="{{ url_for('test') }}">How to install</a></li>
+                    <li><a href="{{ url_for('page2') }}">How to install</a></li>
                     <li><a href="">Tutorial</a></li>
                     <li><a href="">Page result</a></li>
                     <li><a href="">Conclusion</a></li>
@@ -32,7 +32,7 @@
 
         <ul class="sidenav" id="nav-mobile">
                 <li><a href="#">Frameworks</a></li>
-                <li><a href="#">How to install</a></li>
+                <li><a href="{{ url_for('page2') }}">How to install</a></li>
                 <li><a href="#">Tutorial</a></li>
                 <li><a href="#">Page result</a></li>
                 <li><a href="#">Conclusion</a></li>
@@ -52,7 +52,7 @@
                         </div>
                         <div class="card-content">
                         <span class="card-title activator grey-text text-darken-4"><b>Popularity</b><i class="material-icons right">more_vert</i></span>
-                        <p>Click to open</p>
+                        <p>Click image to open</p>
                         </div>
                         <div class="card-reveal">
                         <span class="card-title grey-text text-darken-4">A CSS framework made by Google<i class="material-icons right">close</i></span>
@@ -112,16 +112,16 @@
           
             <div class="col s6">
                 <h2 style="text-align: center; font-size: 4vw; padding-bottom: 50px;">Backend framework:<br>
-                    Ruby on Rails</h2>
+                    Flask</h2>
                 <div class="container">
                   <div class="row">
                     <div class="card small">
                       <div class="card-image waves-effect waves-block waves-light">
-                      <img class="activator" src="{{ url_for('static', filename='img/ruby.png') }}" style="height: 200px;">
+                      <img class="activator" src="{{ url_for('static', filename='img/flask.png') }}" style="height: 200px;">
                       </div>
                       <div class="card-content">
                       <span class="card-title activator grey-text text-darken-4"><b>Popularity</b><i class="material-icons right">more_vert</i></span>
-                      <p>Click to open</p>
+                      <p>Click image to open</p>
                       </div>
                       <div class="card-reveal">
                       <span class="card-title grey-text text-darken-4">Still alive and kickin'<i class="material-icons right">close</i></span>
