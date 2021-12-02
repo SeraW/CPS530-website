@@ -7,6 +7,12 @@
     <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/page2.css') }}">
     <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/materialize.min.css') }}"  media="screen,projection"/>
     
+    <!-- code highlight-->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.16.2/build/styles/dracula.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.16.2/build/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+    
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -41,14 +47,15 @@
       </ul>
 
     <div class="container">
-        <h2 style="text-align: center; font-size: 4vw; padding-bottom: 50px;">Install Materalize</h2>
+        <div id = "Materialize" class="section scrollspy">
+        <h2 style="text-align: center; font-size: 4vw; padding-bottom: 40px; padding-right:20%; letter-spacing: 3px; color: dimgrey;">Install Materalize</h2>
         <div class="row">
-            <div class="col s6">
+            <div class="col s6 m5 l5">
                 <img class="responsive-img polaroid" src="{{ url_for('static', filename='img/download_materialize.PNG') }}">
             </div>
-            <div class="col s6">
+            <div class="col s6 m5 l5">
                 <div class="card blue-grey darken-1">
-                    <div class="card-content white-text">
+                    <div class="card-content contentMobile white-text">
                         <span class="card-title">Step 1: Getting Started</span>
                         <p>You can install Materialize by going directly to the website, or by using NPM.
                         Simply run npm install <b>materialize-css@next</b> if you're on Linux.</p>
@@ -58,26 +65,156 @@
                     </div>
                 </div>
             </div>
+            <div class="col hide-on-small-only m2 l2">
+                <ul class="section table-of-contents" style="padding-left: 50px;">
+                    <li><a href="#Materialize">Materialize</a></li>
+                    <li><a href="#Flask">Flask</a></li>
+                    <li><a href="#initialization">Intialization</a></li>
+                </ul>
+            </div>
         </div>
         <div class="row">
-            <div class="col s6">
+            <div class="col s6 m5 l5">
                 <img class="responsive-img polaroid" src="{{ url_for('static', filename='img/m_directory.PNG') }}">
             </div>
-            <div class="col s6">
+            <div class="col s6 m5 l5">
                 <div class="card blue-grey darken-1">
-                    <div class="card-content white-text">
+                    <div class="card-content contentMobile white-text">
                         <span class="card-title">Step 2: Directory Setup</span>
-                        <p>Your initial directory will look something like this.
-                        Simply run npm install <b>materialize-css@next</b> if you're on Linux.</p>
+                        <p>Your initial directory will look something like this. materialize.css and materialize.jss
+                        both come with prepackaged assets that are ready to use.</p>
                     </div>
-                    <div class="card-action">
-                        <a href="https://materializecss.com/getting-started.html">Install From Here</a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s10 m10 l10">
+                <h4 style="color: #484848;">Step 3: HTML Setup </h4>
+                <pre><code class="language-html">             
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+    &lt;!--Import Google Icon Font--&gt;
+    &lt;link href=&quot;https://fonts.googleapis.com/icon?family=Material+Icons&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;!--Import materialize.css--&gt;
+    &lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;{{ url_for('static', filename='css/materialize.min.css') }}&quot;  media=&quot;screen,projection&quot;/&gt;
+    &lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;{{ url_for('static', filename='css/page1.css') }}&quot;&gt;
+
+    &lt;!--Let browser know website is optimized for mobile--&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;/&gt;
+    &lt;/head&gt;
+                </pre></code>
+            </div>
+        </div>
+        </div>
+        <div class="section scrollspy" id="Flask">
+        <div class="row">
+            <h2 style="text-align: center; font-size: 4vw; padding-right:20%; letter-spacing: 3px; color: dimgrey;">Install Flask</h2>
+        <div class="row">
+            <div class="col s6 m5 l5">
+                <pre><code class="language-bash">
+pip install flask
+pip install gunicorn
+                </pre></code>
+            </div>
+            <div class="col s6 m5 l5">
+                <div class="card blue-grey darken-1">
+                    <div class="card-content contentMobile white-text">
+                        <span class="card-title">Step 1: Download essentials</span>
+                        <p>Download Flask and Gunicorn using pip.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="row">
+            <div class="col s6 m5 l5">
+                <pre><code class="language-bash">
+mkdir app
+cd app
+touch main.py
+                </pre></code>
+            </div>
+            <div class="col s6 m5 l5">
+                <div class="card blue-grey darken-1">
+                    <div class="card-content contentMobile white-text">
+                        <span class="card-title">Step 2: Make an apps folder</span>
+                        <p>Make a folder for your app, and make a starter program called <b>main.py.</b></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s6 m5 l5">
+                <pre><code class="language-python">
+from flask import Flask
+app=Flask(__name__)
+
+@app.route('/')
+def index():
+    return "&lt;h1&gt;Hello World&lt;/h1&gt;"
+                </pre></code>
+            </div>
+            <div class="col s6 m5 l5">
+                <div class="card blue-grey darken-1">
+                    <div class="card-content contentMobile white-text">
+                        <span class="card-title">Step 3: main.py</span>
+                        <p>Set up <b>main.py</b> by initializing and creating a route with a simple landing message for our index page.
+                        Now, Flask knows where to look to find our page resources.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s6 m5 l5">
+                <pre><code class="language-python">
+from app.main import app
+if __name__ == "__main__":
+  app.run()
+                </pre></code>
+            </div>
+            <div class="col s6 m5 l5">
+                <div class="card blue-grey darken-1">
+                    <div class="card-content contentMobile white-text">
+                        <span class="card-title">Step 4: wsgi.py</span>
+                        <p>Outside of your apps folder, create wsgi.py, a Web Server Gateway Interface.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s6 m5 l5">
+                <pre><code class="language-bash">
+ pip freeze > requirements.txt 
+ vim Procfile                  
+                </pre></code>
+            </div>
+            <div class="col s6 m5 l5">
+                <div class="card blue-grey darken-1">
+                    <div class="card-content contentMobile white-text">
+                        <span class="card-title">Step 5: requirements.txt</span>
+                        <p>requirements.txt is needed to specify which python packages are needed to run the app.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s6 m5 l5">
+                <pre><code class="language-html">
+ web: gunicorn wsgi:app           
+                </pre></code>
+            <a class="btn tooltipped" data-position="bottom" data-tooltip="Procfile is a file w/o an extension!">NOTE</a>
+            </div>
+            <div class="col s6 m5 l5">
+                <div class="card blue-grey darken-1">
+                    <div class="card-content contentMobile white-text">
+                        <span class="card-title">Step 6: Procfile</span>
+                        <p>A Procfile is needed to specify the commands that are executed by the app on startup.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -85,6 +222,8 @@
     <script>
         $(document).ready(function(){
           $('.sidenav').sidenav();
+          $('.scrollspy').scrollSpy();
+          $('.tooltipped').tooltip();
         })
     </script>
   </body>

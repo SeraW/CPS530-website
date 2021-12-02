@@ -1,13 +1,29 @@
 .polaroid {
-    width: 85%;
+    width: 100%;
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin-bottom: 25px;
+    margin-bottom: 5%;
   }
 
-.cardColor {
-    background-color: #6897bb;
+
+@media only screen and (max-width: 600px) {
+  .contentMobile {
+    padding: 5px !important;
+  }
+  .contentMobile .card-title {
+    font-size: 12px !important;
+  }
+  p {
+    font-size: 10px !important;
+  }
+
+  .card-action {
+    font-size: 10px;
+  }
+
 }
 
-  
-  
+.table-of-contents {
+  position: fixed;
+
+}

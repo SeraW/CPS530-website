@@ -7,3 +7,7 @@
     max-height: none;
     object-fit: none;
 }
+
+.table-of.contents {
+    position: fixed;
+}
