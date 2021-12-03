@@ -30,18 +30,18 @@
               <ul class="right hide-on-med-and-down">
                   <li><a href="{{ url_for('index') }}">Frameworks</a></li>
                   <li class="active"><a href="{{ url_for('page2') }}">How to install</a></li>
-                  <li><a href="">Tutorial</a></li>
-                  <li><a href="">Page result</a></li>
+                  <li><a href="{{ url_for('page3') }}">Tutorial</a></li>
+                  <li><a href="{{ url_for('page4') }}">Page result</a></li>
                   <li><a href="">Conclusion</a></li>
                   <li><a href="">Credits</a></li>
               </ul>
       </nav>
 
       <ul class="sidenav" id="nav-mobile">
-              <li><a href="#">Frameworks</a></li>
+              <li><a href="{{ url_for('index') }}">Frameworks</a></li>
               <li><a href="{{ url_for('page2') }}">How to install</a></li>
-              <li><a href="#">Tutorial</a></li>
-              <li><a href="#">Page result</a></li>
+              <li><a href="{{ url_for('page3') }}">Tutorial</a></li>
+              <li><a href="{{ url_for('page4') }}">Page result</a></li>
               <li><a href="#">Conclusion</a></li>
               <li><a href="#">Credits</a></li>
       </ul>
@@ -69,7 +69,7 @@
                 <ul class="section table-of-contents" style="padding-left: 50px;">
                     <li><a href="#Materialize">Materialize</a></li>
                     <li><a href="#Flask">Flask</a></li>
-                    <li><a href="#initialization">Intialization</a></li>
+                    <li><a href="#Heroku">Heroku</a></li>
                 </ul>
             </div>
         </div>
@@ -210,6 +210,81 @@ if __name__ == "__main__":
                     <div class="card-content contentMobile white-text">
                         <span class="card-title">Step 6: Procfile</span>
                         <p>A Procfile is needed to specify the commands that are executed by the app on startup.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section scrollspy" id="Heroku">
+        <div class="row">
+            <h2 style="text-align: center; font-size: 4vw; padding-right:20%; letter-spacing: 3px; color: dimgrey;">Install Heroku</h2>
+        </div>
+        <div class="row">
+            <div class="col s6 m5 l5">
+                <img class="responsive-img polaroid" src="{{ url_for('static', filename='img/heroku_login.PNG') }}">
+            </div>
+            <div class="col s6 m5 l5">
+                <div class="card blue-grey darken-1">
+                    <div class="card-content contentMobile white-text">
+                        <span class="card-title" style="text-align: center;">Step 1: Download and make an account</span>
+                        <p>Heroku is a PaaS that allows users to develop their own apps on its cloud platform.
+                            We will be hosting our web app on Heroku, at the low, low cost of $0! You can directly link your Git repo
+                            with Heroku.
+                        </p>
+                    </div>
+                    <div class="card-action">
+                        <a href="https://id.heroku.com/login">Sign up here</a>
+                        <a href="https://devcenter.heroku.com/articles/heroku-cli">Download here</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s6 m5 l5">
+                <img class="responsive-img polaroid" src="{{ url_for('static', filename='img/final_directory.PNG') }}">
+            </div>
+            <div class="col s6 m5 l5">
+                <div class="card blue-grey darken-1">
+                    <div class="card-content contentMobile white-text">
+                        <span class="card-title">Step 2: Directory setup pt2</span>
+                        <p>Flask and Heroku will recognize specific directory setups. The Procfile needs to be in your app's root directory,
+                            as it will not work anywhere else. Both requirements.txt and wsgi.py are also usually located at the root.
+                            The static folder houses css, img, and js material, and Flask is able to access them using functions like url_For. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s6 m5 l5">
+                <pre><code class="language-bash">
+heroku login
+git add --all
+git commit -m "first commit"
+git push
+                </pre></code>
+            </div>
+            <div class="col s6 m5 l5">
+                <div class="card blue-grey darken-1">
+                    <div class="card-content contentMobile white-text">
+                        <span class="card-title">Step 3: Push to Git</span>
+                        <p>Push your files to Git. If you have the option enabled, Heroku should automatically sync.
+                            Your app is now deployed!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s6 m5 l5">
+                <img class="responsive-img polaroid" src="{{ url_for('static', filename='img/tutorial_setup.PNG') }}">
+            </div>
+            <div class="col s6 m5 l5">
+                <div class="card blue-grey darken-1">
+                    <div class="card-content contentMobile white-text">
+                        <span class="card-title">Step 4: All done!</span>
+                        <p>Visit your app url to see your first page.
+                        </p>
                     </div>
                 </div>
             </div>

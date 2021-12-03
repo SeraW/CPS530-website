@@ -1,0 +1,9 @@
+.tapbubble{
+    bottom:0px;
+    position: fixed;
+    right:0px;
+}
+
+.buttonCenter{
+    text-align: right;
+}

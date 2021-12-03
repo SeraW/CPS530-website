@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/page2.css') }}">
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/materialize.min.css') }}"  media="screen,projection"/>
+    
+    <!-- code highlight-->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.16.2/build/styles/dracula.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.16.2/build/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+    
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
+
+
+
+  <body style="background-color: #0C0B0B">
+      
+      <nav class="nav-wrapper orange darken-4">
+          <a href="#!" class="brand-logo" style="padding-left: 10px;">CPS530</a>
+          <a href="#" class="sidenav-trigger" data-target="nav-mobile">
+              <i class="material-icons">menu</i>
+          </a>
+              <ul class="right hide-on-med-and-down">
+                  <li><a href="{{ url_for('index') }}">Frameworks</a></li>
+                  <li><a href="{{ url_for('page2') }}">How to install</a></li>
+                  <li class="active"><a href="{{ url_for('page3') }}">Tutorial</a></li>
+                  <li><a href="{{ url_for('page4') }}">Page result</a></li>
+                  <li><a href="">Conclusion</a></li>
+                  <li><a href="">Credits</a></li>
+              </ul>
+      </nav>
+
+      <ul class="sidenav" id="nav-mobile">
+              <li><a href="{{ url_for('index') }}">Frameworks</a></li>
+              <li><a href="{{ url_for('page2') }}">How to install</a></li>
+              <li><a href="{{ url_for('page3') }}">Tutorial</a></li>
+              <li><a href="{{ url_for('page4') }}">Page result</a></li>
+              <li><a href="#">Conclusion</a></li>
+              <li><a href="#">Credits</a></li>
+      </ul>
+
+
+      <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+      <script type="text/javascript" src="{{ url_for('static', filename='js/materialize.min.js') }}"></script>
+      <script>
+          $(document).ready(function(){
+            $('.sidenav').sidenav();
+            $('.scrollspy').scrollSpy();
+            $('.tooltipped').tooltip();
+          })
+      </script>
+    </body>
+  </html>
