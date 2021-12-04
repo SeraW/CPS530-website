@@ -4,11 +4,11 @@
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/page2.css') }}">
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/page3.css') }}">
     <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/materialize.min.css') }}"  media="screen,projection"/>
     
     <!-- code highlight-->
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.16.2/build/styles/dracula.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/base16/ros-pine-dawn.min.css" />
     <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.16.2/build/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
     
@@ -20,9 +20,9 @@
 
 
 
-  <body style="background-color: #0C0B0B">
+  <body>
       
-      <nav class="nav-wrapper orange darken-4">
+      <nav class="nav-wrapper pink lighten-3">
           <a href="#!" class="brand-logo" style="padding-left: 10px;">CPS530</a>
           <a href="#" class="sidenav-trigger" data-target="nav-mobile">
               <i class="material-icons">menu</i>
@@ -32,7 +32,7 @@
                   <li><a href="{{ url_for('page2') }}">How to install</a></li>
                   <li class="active"><a href="{{ url_for('page3') }}">Tutorial</a></li>
                   <li><a href="{{ url_for('page4') }}">Page result</a></li>
-                  <li><a href="">Conclusion</a></li>
+                  <li><a href="{{ url_for('page5') }}">Conclusion</a></li>
                   <li><a href="">Credits</a></li>
               </ul>
       </nav>
@@ -42,9 +42,304 @@
               <li><a href="{{ url_for('page2') }}">How to install</a></li>
               <li><a href="{{ url_for('page3') }}">Tutorial</a></li>
               <li><a href="{{ url_for('page4') }}">Page result</a></li>
-              <li><a href="#">Conclusion</a></li>
+              <li><a href="{{ url_for('page5') }}">Conclusion</a></li>
               <li><a href="#">Credits</a></li>
       </ul>
+
+      <div class="container">
+        <div class="row">
+          <div class="col s12">
+            <ul class="tabs">
+              <li class="tab col s12 m6 l6"><a class="active" href="#frontend">Frontend</a></li>
+              <li class="tab col s12 m6 l6"><a href="#backend">Backend</a></li>
+            </ul>
+          </div>
+          <div id="frontend" class="col s12">
+            <div class="col hide-on-med-and-down">
+              <ul class="section table-of-contents">
+                  <li><a href="#step1">Header</a></li>
+                  <li><a href="#step2">Parallax</a></li>
+                  <li><a href="#step3">Cards</a></li>
+                  <li><a href="#step4">Collectible</a></li>
+                  <li><a href="#step5">Flex</a></li>
+                  <li><a href="#step6">Form</a></li>
+                  <li><a href="#step7">Footer</a></li>
+                  <li><a href="#step8">Feature Discovery</a></li>
+                  <li><a href="#step9">jQuery</a></li>
+              </ul>
+            </div>
+            <div class="col s12 scrollspy" id="step1">
+              <h4 style="color: #484848;" class="flow-text">Step 1: Create a  cool header</h4>
+              <pre><code class="language-html">             
+&lt;nav class=&quot;nav-wrapper&quot;&gt;
+  &lt;a href=&quot;#!&quot; class=&quot;brand-logo&quot; style=&quot;padding-left: 10px;&quot;&gt;CPS530&lt;/a&gt;
+  &lt;a href=&quot;#&quot; class=&quot;sidenav-trigger&quot; data-target=&quot;nav-mobile&quot;&gt;
+      &lt;i class=&quot;material-icons&quot;&gt;menu&lt;/i&gt;
+  &lt;/a&gt;
+      &lt;ul class=&quot;right hide-on-med-and-down&quot;&gt;
+          &lt;li&gt;&lt;a href=&quot;{{ url_for('index') }}&quot;&gt;Frameworks&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;{{ url_for('page2') }}&quot;&gt;How to install&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;{{ url_for('page3') }}&quot;&gt;Tutorial&lt;/a&gt;&lt;/li&gt;
+          &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;{{ url_for('page4') }}&quot;&gt;Page result&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;&quot;&gt;Conclusion&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;&quot;&gt;Credits&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+&lt;/nav&gt;
+
+  &lt;ul class=&quot;sidenav&quot; id=&quot;nav-mobile&quot;&gt;
+      &lt;li&gt;&lt;a href=&quot;{{ url_for('index') }}&quot;&gt;Frameworks&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;{{ url_for('page2') }}&quot;&gt;How to install&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;{{ url_for('page3') }}&quot;&gt;Tutorial&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;{{ url_for('page4') }}&quot;&gt;Page result&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Conclusion&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Credits&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+          </pre></code>
+          <blockquote>
+            The sidenav class will allow users to access a cleaner navigator on mobile.<br>
+            It will only be visible on smaller screens.
+          </blockquote>
+            </div>
+            <div class="col s12 scrollspy" id="step2">
+              <h4 style="color: #484848;" class="flow-text">Step 2: Parallax</h4>
+              <pre><code class="language-html">
+  &lt;div class=&quot;row&quot;&gt;
+      &lt;h2 style=&quot;text-align: center; font-size: 4vw; letter-spacing: 3px; color: dimgrey;&quot;&gt;Why Cereal is Better without Milk&lt;/h2&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;parallax-container&quot;&gt;
+      &lt;div class=&quot;parallax&quot;&gt;&lt;img src=&quot;{{ url_for('static', filename='img/parallax.jpg') }}&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+              </pre></code>
+              <blockquote>
+                Note: use url_for to retrieve urls (Flask functionality)
+              </blockquote>
+            </div>
+            <div class= "col s12 scrollspy" id="step3">
+              <h4 style="color: #484848;" class="flow-text">Step 3: Create Cards</h4>
+              <pre><code class="language-html">
+&lt;section class=&quot;container&quot;&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col s12 m6 l6&quot;&gt;
+      &lt;div class=&quot;card small&quot;&gt;
+        &lt;div class=&quot;card-image&quot;&gt;
+          &lt;img src=&quot;{{ url_for('static', filename='img/cereal_milk.jpg') }}&quot;&gt;
+          &lt;span class=&quot;card-title&quot; style=&quot;color: #484141; font-weight: 350;&quot;&gt;Wet Cereal Sucks&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;card-content&quot;&gt;
+          &lt;p&gt;It's soggy and it makes the texture uneven. Cereal was made to be crunchy; if you add milk, 
+            you are obligated to rush to eat it before it turns into complete mush.
+          &lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+              </pre></code>
+              <blockquote>
+                The "card" class is part of the Materialize framework. <br>
+                It provides a neat way of displaying information in an eye-catching way.<br>
+                Create more cards until you are satisfied!
+              </blockquote>
+            </div>
+            <div class="col s12 scrollspy" id="step4">
+              <h4 style="color: #484848;" class="flow-text">Step 4: Add a Collectible</h4>
+              <pre><code class="language-html">
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col s12&quot;&gt;
+    &lt;h4 style=&quot;text-align: center; color: dimgrey;&quot;&gt;My preferred cereals&lt;/h4&gt;
+    &lt;ul class=&quot;collapsible popout&quot;&gt;
+      &lt;li&gt;
+        &lt;div class=&quot;collapsible-header&quot;&gt;
+          &lt;i class=&quot;material-icons&quot;&gt;filter_1&lt;/i&gt;
+          Cinnamon Toast Crunch
+          &lt;span class=&quot;badge&quot; data-badge-caption=&quot;click to open&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+        &lt;div class=&quot;collapsible-body&quot;&gt;&lt;p&gt;Sweet, but has a pretty unique taste.&lt;/p&gt;&lt;/div&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;div class=&quot;collapsible-header&quot;&gt;
+          &lt;i class=&quot;material-icons&quot;&gt;filter_2&lt;/i&gt;
+          Honey Nut Cheerios
+        &lt;/div&gt;
+        &lt;div class=&quot;collapsible-body&quot;&gt;&lt;p&gt;You can't hate the classics. All-around solid cereal.&lt;/p&gt;&lt;/div&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+              </pre></code>
+              <blockquote>
+               Collectibles are another way of displaying small bursts of information. <br>
+               It is a list with the added option of dropdowns or popouts.
+              </blockquote>
+            </div>
+            <div class="col s12 scrollspy" id="step5">
+              <h4 style="color: #484848;" class="flow-text">Step 5: Another Parallax</h4>
+              <pre><code class="language-html">
+&lt;div class=&quot;parallax-container&quot;&gt;
+  &lt;div class=&quot;parallax&quot;&gt;&lt;img src=&quot;{{ url_for('static', filename='img/yellow_cereal.jpg') }}&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+              </pre></code>
+              <blockquote>
+                Add another parallax to flex
+               </blockquote>
+            </div>
+            <div class="col s12 scrollspy" id="step6">
+              <h4 style="color: #484848;" class="flow-text">Step 6: Create a Form</h4>
+              <pre><code class="language-html">
+&lt;div class=&quot;container&quot;&gt;
+&lt;form action=&quot;/form&quot; method=&quot;POST&quot;&gt;
+  
+    &lt;div class=&quot;row&quot;&gt;
+      &lt;div class=&quot;input-field col s6&quot;&gt;
+        &lt;input id=&quot;first_name&quot; type=&quot;text&quot; class=&quot;validate&quot; name=&quot;first_name&quot; required&gt; 
+        &lt;label for=&quot;first_name&quot;&gt;First Name&lt;/label&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;input-field col s6&quot;&gt;
+        &lt;input id=&quot;last_name&quot; type=&quot;text&quot; class=&quot;validate&quot; name=&quot;last_name&quot; required&gt;
+        &lt;label for=&quot;last_name&quot;&gt;Last Name&lt;/label&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;               
+              </pre></code>
+            <blockquote>
+              Create a form where users can submit their information. <br>
+              Materialize has some prebuilt form functions (checkboxes, text inputs, etc.)
+             </blockquote>
+          </div>
+          <div class="col s12 scrollspy" id="step7">
+            <h4 style="color: #484848;" class="flow-text">Step 7: Make a Footer</h4>
+            <pre><code class="language-html">
+&lt;footer class=&quot;page-footer&quot;&gt;
+    &lt;div class=&quot;container&quot;&gt;
+      &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col l6 s12&quot;&gt;
+          &lt;h5 class=&quot;white-text&quot;&gt;Thanks for viewing my page&lt;/h5&gt;
+          &lt;p class=&quot;grey-text text-lighten-4&quot;&gt;I hope you have a great day&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;col l4 offset-l2 s12&quot;&gt;
+          &lt;h5 class=&quot;white-text&quot;&gt;More Stuff&lt;/h5&gt;
+          &lt;ul&gt;
+            &lt;li&gt;&lt;a class=&quot;grey-text text-lighten-3&quot; href=&quot;#&quot;&gt;Video I watched&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a class=&quot;grey-text text-lighten-3&quot; href=&quot;#&quot;&gt;Study Music&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;footer-copyright&quot;&gt;
+      &lt;div class=&quot;container&quot;&gt;
+      &copy; 2021 Copyright Here etc
+      &lt;/div&gt;
+    &lt;/div&gt;
+ &lt;/footer&gt;
+            </pre></code>
+            <blockquote>
+              The classes, page-footer and footer-copyright help speedline the process of making a footer.
+             </blockquote>
+          </div>
+          <div class="col s12 scrollspy" id="step8">
+            <h4 style="color: #484848;" class="flow-text">Step 8: Feature Discovery</h4>
+            <pre><code class="language-html">
+&lt;div class=&quot;tapbubble&quot;&gt;
+  &lt;a id=&quot;menu&quot; class=&quot;waves-effect waves-light btn btn-floating&quot;  onclick=&quot;$('.tap-target').tapTarget('open')&quot;&gt;&lt;i class=&quot;material-icons&quot;&gt;menu&lt;/i&gt;&lt;/a&gt;
+&lt;/div&gt;
+  
+&lt;div class=&quot;tap-target&quot; data-target=&quot;menu&quot;&gt;
+  &lt;div class=&quot;tap-target-content&quot;&gt;
+    &lt;h5&gt;Hi, thank you for visiting!&lt;/h5&gt;
+    &lt;p&gt;Don't forget to sign up for our newsletter at the bottom!&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+            </pre></code>
+            <blockquote>
+              tap-target is that little thing you can click on to bring up more information. <br>
+              The onClick function tells it what to do when it is clicked.
+             </blockquote>
+          </div>
+          <div class="col s12 scrollspy" id="step9">
+            <h4 style="color: #484848;" class="flow-text">Step 9: Badda Bing Baddaboom</h4>
+            <pre><code class="language-html">
+&lt;script src=&quot;https://code.jquery.com/jquery-3.3.1.min.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;{{ url_for('static', filename='js/materialize.min.js') }}&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+    $(document).ready(function(){
+      $('.sidenav').sidenav();
+      $('.parallax').parallax();
+      $('.collapsible').collapsible();
+      $('.tap-target').tapTarget()('close');
+    })
+&lt;/script&gt;
+            </pre></code>
+            <blockquote>
+              jQuery is a useful shortcut for when you want to easily add in cool stuff to your website.
+             </blockquote>
+          </div>
+          </div>
+
+          <div id="backend" class="col s12">
+            <div class="col hide-on-med-and-down">
+              <ul class="section table-of-contents plus">
+                  <li><a href="#1step">main.py</a></li>
+                  <li><a href="#2step">Get info</a></li>
+                  <li><a href="#3step">Conditions</a></li>
+              </ul>
+            </div>
+            <div class="col s12 scrollspy" id="1step">
+              <h4 style="color: #484848;" class="flow-text">Step 1: Configure main.py</h4>
+              <pre><code class="language-python">
+from flask import Flask, render_template, url_for, request
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+    return render_template('index.html')
+@app.route('/page2')
+def page2():
+    return render_template('page2.html')
+@app.route('/page3')
+def page3():
+    return render_template('page3.html')
+@app.route('/page4')
+def page4():
+    return render_template('page4.html')
+              </pre></code>
+              <blockquote>
+                Set up your app routes for your header so that the other pages are accessible.
+               </blockquote>
+            </div>
+            <div class="col s12 scrollspy" id="2step">
+              <h4 style="color: #484848;" class="flow-text">Step 2: Process info via POST</h4>
+              <pre><code class="language-python">
+@app.route('/form', methods=["POST"])
+def form():
+    first_name= request.form.get("first_name")
+    last_name= request.form.get("last_name")
+    email= request.form.get("email")
+    age= request.form.get("age")
+    cereal= request.form.getlist("cereal")
+    dealbreaker= request.form.get("dealbreaker")            
+              </pre></code>
+              <blockquote>
+                Get and assign info processed from the form page. <br>
+                getlist is used to obtain all of the selected options.
+               </blockquote>
+            </div>
+            <div class="col s12 scrollspy" id="3step">
+              <h4 style="color: #484848;" class="flow-text">Step 3: Add Conditions</h4>
+              <pre><code class="language-python">
+if int(age) &gt; 499:
+  return render_template('old.html')
+elif len(cereal) &lt; 4 or dealbreaker == None:
+  return render_template('noentry.html')
+else:
+  return render_template('form.html', first_name=first_name, last_name=last_name, email=email, age=age,cereal=cereal,dealbreaker=dealbreaker)
+              </pre></code>
+              <blockquote>
+                You can alter your conditions depending on what you
+                want to do and where you want to send the user. <br>
+                Here, users are sent to different pages depending on their answers to the form.
+               </blockquote>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
 
 
       <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -54,6 +349,7 @@
             $('.sidenav').sidenav();
             $('.scrollspy').scrollSpy();
             $('.tooltipped').tooltip();
+            $('.tabs').tabs();
           })
       </script>
     </body>

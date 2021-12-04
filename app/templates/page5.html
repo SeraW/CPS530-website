@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/page5.css') }}">
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/materialize.min.css') }}"  media="screen,projection"/>
+    
+    <!-- code highlight-->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.16.2/build/styles/dracula.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.16.2/build/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+    
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
+
+  <body style="background-color: #E4F1E6;">
+      
+    <nav class="nav-wrapper green lighten-3">
+        <a href="#!" class="brand-logo" style="padding-left: 10px;">CPS530</a>
+        <a href="#" class="sidenav-trigger" data-target="nav-mobile">
+            <i class="material-icons">menu</i>
+        </a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="{{ url_for('index') }}">Frameworks</a></li>
+                <li><a href="{{ url_for('page2') }}">How to install</a></li>
+                <li><a href="{{ url_for('page3') }}">Tutorial</a></li>
+                <li><a href="{{ url_for('page4') }}">Page result</a></li>
+                <li class="active"><a href="{{ url_for('page5') }}">Conclusion</a></li>
+                <li><a href="">Credits</a></li>
+            </ul>
+    </nav>
+
+    <ul class="sidenav" id="nav-mobile">
+            <li><a href="{{ url_for('index') }}">Frameworks</a></li>
+            <li><a href="{{ url_for('page2') }}">How to install</a></li>
+            <li><a href="{{ url_for('page3') }}">Tutorial</a></li>
+            <li><a href="{{ url_for('page4') }}">Page result</a></li>
+            <li><a href="{{ url_for('page5') }}">Conclusion</a></li>
+            <li><a href="#">Credits</a></li>
+    </ul>
+
+    <div class="container">
+        <div class="row">
+            <h1 style="text-align: center; letter-spacing: 3px; color: dimgrey; font-size: 4vw;" class="flow-text">Conclusion</h1>
+        </div>
+        <div class="row">
+            <div class="col s12 m6 l6">
+                <h4 style="color: #484848; text-align: center;" class="flow-text">Materialize</h4>
+                <ul class="collapsible expandable">
+                    <li>
+                      <div class="collapsible-header"><i class="material-icons">grade</i>A Lack of Expectation</div>
+                      <div class="collapsible-body"><span>I didn't know much about Materialize before
+                        I started working with it, however, their website made things super easy to pick up. It had
+                        plenty of demonstrations and examples to work off of. Their documentation was very clean and
+                        understandable. I had no expectations going in, but I was impressed with the framework, nonetheless.
+                      </span></div>
+                    </li>
+                    <li>
+                      <div class="collapsible-header"><i class="material-icons">child_care</i>No Difficulties</div>
+                      <div class="collapsible-body"><span>No difficulties whatsoever. Documentation had step-by-step instructions
+                        on how to install and configure your stuff. It was fun to scroll through all the documentation and pick 
+                        and choose the cool stuff I could do. However, since the framework is very cookie-cutter, it pushes you to
+                        style and format things a certain way. This could result in similar-looking websites and less overall variation.
+                      </span></div>
+                    </li>
+                    <li>
+                      <div class="collapsible-header"><i class="material-icons">trending_down</i>What Learning Curve?</div>
+                      <div class="collapsible-body"><span>Compared to working with just plain CSS, Materialize was a real lifesaver.
+                        Everything was nicely prepackaged, making it possible to take a lot of shortcuts. I'm no professional designer, 
+                        so some of my pages will still end up looking ugly, but that is by no means the framework's fault. Documentation supplied
+                        lots of examples in an easy, digestable way. It was nice.
+                      </span></div>
+                    </li>
+                    <li>
+                      <div class="collapsible-header"><i class="material-icons">access_time</i>In Retrospect</div>
+                      <div class="collapsible-body"><span>If I could do things differently, I would definitely choose to start earlier or spend 
+                        more time on my pages. I'm sure you can tell that the design of my pages differ in quality because when I started out,
+                        I had no idea what I was doing, then slowly got used to the process as I practiced. I'll leave it to you to guess which 
+                        page was my first lol.
+                      </span></div>
+                    </li>
+                    <li>
+                      <div class="collapsible-header"><i class="material-icons">http</i>No Regrets</div>
+                      <div class="collapsible-body"><span>I can't say I really have any regrets. Using this framework
+                        was pretty fun, and I liked all of the cool stuff I could do. It was easy to understand and I 
+                        liked the aesthetic. 
+                      </span></div>
+                    </li>
+                  </ul>
+            </div>
+            <div class="col s12 m6 l6">
+              <h4 style="color: #484848; text-align: center;" class="flow-text">Flask</h4>
+                <ul class="collapsible expandad">
+                    <li>
+                      <div class="collapsible-header"><i class="material-icons">sentiment_satisfied</i>Things Went Ok</div>
+                      <div class="collapsible-body"><span>Again, I had little to no expectations going in. It was fairly
+                        simple to get a grasp of structure and setup after looking at some other examples.
+                      </span></div>
+                    </li>
+                    <li>
+                      <div class="collapsible-header"><i class="material-icons">code</i>Some Difficulties</div>
+                      <div class="collapsible-body"><span>I had a bit of trouble configuring everything and hosting appropriately. This was
+                        probably the hardest part of the project -- the hosting. It took me some time to figure out what went where and
+                        what needed what. 
+                      </span></div>
+                    </li>
+                    <li>
+                      <div class="collapsible-header"><i class="material-icons">record_voice_over</i>I Was Stupid</div>
+                      <div class="collapsible-body"><span>The learning curve was a bit steeper for me compared to PHP and other frameworks,
+                        mostly due to setup and hosting. I spent more time on figuring out how to set up and host than I would've preferred.
+                        Python itself is an easy language to pick up, but getting everything to work in conjunction was a bit of a challenge.
+                      </span></div>
+                    </li>
+                    <li>
+                      <div class="collapsible-header"><i class="material-icons">refresh</i>Hindsight 20/20</div>
+                      <div class="collapsible-body"><span>Maybe I would've picked another framework to use as a backend. Ruby on
+                        Rails, Node.js, and Django seem like much more common frameworks and I'd like to get some experience using those. 
+                      </span></div>
+                    </li>
+                    <li>
+                      <div class="collapsible-header"><i class="material-icons">wb_incandescent</i>Someday</div>
+                      <div class="collapsible-body"><span>Probably should've started earlier and chosen a framework more commonplace. I do 
+                        appreciate the fact that Flask was overall simple to use and understand when it came to things like forms and routing. 
+                      </span></div>
+                    </li>
+                  </ul>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/materialize.min.js') }}"></script>
+    <script>
+        $(document).ready(function(){
+          $('.sidenav').sidenav();
+          $('.scrollspy').scrollSpy();
+          $('.tooltipped').tooltip();
+          $('.tabs').tabs();
+        })
+    </script>
+    <script>
+        var elem = document.querySelector('.collapsible.expandable');
+        var instance = M.Collapsible.init(elem, {
+            accordion: false
+        });
+
+        var elem = document.querySelector('.collapsible.expandad');
+        var instance = M.Collapsible.init(elem, {
+            accordion: false
+        });
+    </script>
+  </body>
+</html>
