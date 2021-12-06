@@ -23,6 +23,10 @@ def page4():
 def page5():
     return render_template('page5.html')
 
+@app.route('/page6')
+def page6():
+    return render_template('page6.html')
+
 @app.route('/form', methods=["POST"])
 def form():
     first_name= request.form.get("first_name")

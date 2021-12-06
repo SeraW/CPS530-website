@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/page6.css') }}">
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/materialize.min.css') }}"  media="screen,projection"/>
+    
+    <!-- code highlight-->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.16.2/build/styles/dracula.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.16.2/build/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+    
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
+
+  <body>
+    <nav class="nav-wrapper orange lighten-2">
+        <a href="#!" class="brand-logo" style="padding-left: 10px;">CPS530</a>
+        <a href="#" class="sidenav-trigger" data-target="nav-mobile">
+            <i class="material-icons">menu</i>
+        </a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="{{ url_for('index') }}">Frameworks</a></li>
+                <li><a href="{{ url_for('page2') }}">How to install</a></li>
+                <li><a href="{{ url_for('page3') }}">Tutorial</a></li>
+                <li><a href="{{ url_for('page4') }}">Page result</a></li>
+                <li><a href="{{ url_for('page5') }}">Conclusion</a></li>
+                <li  class="active"><a href="">Credits</a></li>
+            </ul>
+    </nav>
+
+    <ul class="sidenav" id="nav-mobile">
+            <li><a href="{{ url_for('index') }}">Frameworks</a></li>
+            <li><a href="{{ url_for('page2') }}">How to install</a></li>
+            <li><a href="{{ url_for('page3') }}">Tutorial</a></li>
+            <li><a href="{{ url_for('page4') }}">Page result</a></li>
+            <li><a href="{{ url_for('page5') }}">Conclusion</a></li>
+            <li><a href="#">Credits</a></li>
+    </ul>
+
+    
+    <div class="bg"></div>
+    <div class="container">
+        <h1 style="text-align: center; letter-spacing: 3px; color: dimgrey; font-size: 6.5vw;" class="flow-text">Hi, I'm Sera 👋</h1>
+        <h6 style="text-align: center; font-size: 3vw; letter-spacing: 3px; color: dimgrey; padding-bottom: 10%;">This project was just me</h6>
+        <h6 style="text-align: center; font-size: 2.5vw; letter-spacing: 3px; color: dimgrey;">Credits</h6>
+        <div class="row">
+            <ul class="collection">
+                <li class="collection-item avatar">
+                  <img src="{{ url_for('static', filename='img/Materialize_CSS.png') }}" alt="" class="circle">
+                  <span class="title">Image</span>
+                  <p>Source: Pngset
+                  </p>
+                  <a href="https://pngset.com/download-free-png-qvcwh" target="_blank" class="secondary-content"><i class="material-icons">send</i></a>
+                </li>
+                <li class="collection-item avatar">
+                  <img src="{{ url_for('static', filename='img/flask.png') }}" class="circle">
+                  <span class="title">Image</span>
+                  <p>Source: PNGkey
+                  </p>
+                  <a href="https://www.pngkey.com/detail/u2q8y3w7a9a9w7u2_flask-logo-flask-python-icon/" target="_blank" class="secondary-content"><i class="material-icons">send</i></a>
+                </li>
+                <li class="collection-item avatar">
+                  <i class="material-icons circle purple lighten-3">chrome_reader_mode</i>
+                  <span class="title">Resource</span>
+                  <p>Materialize Documentation
+                  </p>
+                  <a href="https://materializecss.com/" target="_blank" class="secondary-content"><i class="material-icons">send</i></a>
+                </li>
+                <li class="collection-item avatar">
+                  <i class="material-icons circle red">play_arrow</i>
+                  <span class="title">Resource</span>
+                  <p>Python Flask Tutorial: Full-Featured Web App Part 1 - Getting Started
+                  </p>
+                  <a href="https://www.youtube.com/watch?v=MwZwr5Tvyxo" target="_blank" class="secondary-content"><i class="material-icons">send</i></a>
+                </li>
+                <li class="collection-item avatar">
+                    <i class="material-icons circle teal lighten-3">computer</i>
+                    <span class="title">Resource</span>
+                    <p>Deploying a Flask Application to Heroku
+                    </p>
+                    <a href="https://stackabuse.com/deploying-a-flask-application-to-heroku/" target="_blank" class="secondary-content"><i class="material-icons">send</i></a>
+                </li>
+                <li class="collection-item avatar">
+                    <i class="material-icons circle deep-orange lighten-3">code</i>
+                    <span class="title">Resource</span>
+                    <p>How to display example code on your website
+                    </p>
+                    <a href="https://codersguidebook.com/how-to-build-a-website/display-example-code-on-website" target="_blank" class="secondary-content"><i class="material-icons">send</i></a>
+                </li>
+                <li class="collection-item avatar">
+                    <i class="material-icons circle light-green lighten-3">file_download</i>
+                    <span class="title">Resource</span>
+                    <p>highlight.js
+                    </p>
+                    <a href="https://cdnjs.com/libraries/highlight.js" target="_blank" class="secondary-content"><i class="material-icons">send</i></a>
+                </li>
+                <li class="collection-item avatar">
+                    <img src="{{ url_for('static', filename='img/parallax.jpg') }}" class="circle">
+                    <span class="title">Image</span>
+                    <p>Source: Unsplash
+                    </p>
+                    <a href="https://unsplash.com/photos/Ht6uD-8HWFU" target="_blank" class="secondary-content"><i class="material-icons">send</i></a>
+                  </li>
+                <li class="collection-item avatar">
+                    <img src="{{ url_for('static', filename='img/yellow_cereal.jpg') }}" class="circle">
+                    <span class="title">Image</span>
+                    <p>Source: Unsplash
+                    </p>
+                    <a href="https://unsplash.com/photos/MLlqTZFcCYk" target="_blank" class="secondary-content"><i class="material-icons">send</i></a>
+                </li>
+                <li class="collection-item avatar">
+                    <img src="{{ url_for('static', filename='img/cereal_milk_circle.jpg') }}" class="circle">
+                    <span class="title">Image</span>
+                    <p>Source: Unsplash
+                    </p>
+                    <a href="https://unsplash.com/photos/MLlqTZFcCYk" target="_blank" class="secondary-content"><i class="material-icons">send</i></a>
+                </li>
+                <li class="collection-item avatar">
+                    <img src="{{ url_for('static', filename='img/cutting_board.jpg') }}" class="circle">
+                    <span class="title">Image</span>
+                    <p>Source: Unsplash
+                    </p>
+                    <a href="https://unsplash.com/photos/HRldvxTg6nM" target="_blank" class="secondary-content"><i class="material-icons">send</i></a>
+                </li>
+                <li class="collection-item avatar">
+                    <i class="material-icons circle red">play_arrow</i>
+                    <span class="title">Resource</span>
+                    <p>Web Forms With Flask - Python and Flask #4
+                    </p>
+                    <a href="https://www.youtube.com/watch?v=Rxp3mkg2mRQ" target="_blank" class="secondary-content"><i class="material-icons">send</i></a>
+                  </li>
+              </ul>
+        </div>
+    </div>
+    
+    
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/materialize.min.js') }}"></script>
+    <script>
+        $(document).ready(function(){
+          $('.sidenav').sidenav();
+          $('.scrollspy').scrollSpy();
+          $('.tooltipped').tooltip();
+          $('.tabs').tabs();
+        })
+    </script>
+    <script>
+        var elem = document.querySelector('.collapsible.expandable');
+        var instance = M.Collapsible.init(elem, {
+            accordion: false
+        });
+
+        var elem = document.querySelector('.collapsible.expandad');
+        var instance = M.Collapsible.init(elem, {
+            accordion: false
+        });
+    </script>
+  </body>
+</html>

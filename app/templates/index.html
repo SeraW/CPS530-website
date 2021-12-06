@@ -13,9 +13,9 @@
 
 
 
-    <body>
+    <body style="background-color: #ffebee ;">
         
-        <nav class="nav-wrapper red darken-4">
+        <nav class="nav-wrapper red lighten-1">
             <a href="#!" class="brand-logo" style="padding-left: 10px;">CPS530</a>
             <a href="#" class="sidenav-trigger" data-target="nav-mobile">
                 <i class="material-icons">menu</i>
@@ -26,7 +26,7 @@
                     <li><a href="{{ url_for('page3') }}">Tutorial</a></li>
                     <li><a href="{{ url_for('page4') }}">Page result</a></li>
                     <li><a href="{{ url_for('page5') }}">Conclusion</a></li>
-                    <li><a href="">Credits</a></li>
+                    <li><a href="{{ url_for('page6') }}">Credits</a></li>
                 </ul>
         </nav>
 
@@ -36,156 +36,94 @@
                 <li><a href="{{ url_for('page3') }}">Tutorial</a></li>
                 <li><a href="{{ url_for('page4') }}">Page result</a></li>
                 <li><a href="{{ url_for('page5') }}">Conclusion</a></li>
-                <li><a href="#">Credits</a></li>
+                <li><a href="{{ url_for('page6') }}">Credits</a></li>
         </ul>
 
+        <div class="container">
+          <div class="row">
+              <h1 style="text-align: center; letter-spacing: 3px; color: dimgrey; font-size: 4vw;" class="flow-text">Frameworks</h1>
+          </div>
+          <div class="row">
+              <div class="col s12 m6 l6">
+                  <h4 style="color: #484848; text-align: center;" class="flow-text">Materialize</h4>
+                  <ul class="collapsible popout">
+                      <li>
+                        <div class="collapsible-header"><i class="material-icons">devices</i>A CSS Framework Made by Google</div>
+                        <div class="collapsible-body"><span>Materalize is mostly used in the United States. According to the <a href="https://2019.stateofcss.com/technologies/css-frameworks/">State of CSS report 2019,</a> 72% of those
+                           surveyed had heard of Materialize, and 37% were interested in using it. <br><br>
+                           It was overall ranked 3rd in terms of popularity -- being beaten out by Bootstrap and 
+                           Foundation. However, only 17.1% of developers say they would use it again, compared to 45% for Bootstrap.
+                        </span></div>
+                      </li>
+                      <li>
+                        <div class="collapsible-header"><i class="material-icons">palette</i>Easy and Efficient</div>
+                        <div class="collapsible-body"><span>The built-in custom components make for easy and fast development. There are many free plugins for drop-downs, collapses and more. 
+                          The framework is also very responsive, and makes for a great user experience.</p>
+                          <p>Overall, Materalize is easy to pick up, with great built-in features, and ready-to-use page elements.</p>
+                        </span></div>
+                      </li>
+                      <li>
+                        <div class="collapsible-header"><i class="material-icons">vpn_lock</i>New, Small, Limited</div>
+                        <div class="collapsible-body"><span><p>Materialize does not work on older browsers, such as anything older than Internet Explorer 10. 
+                          In addition, the framework has a smaller community with less detailed documentation and forums.</p>
+                          <p>Designs are also fairly limited; websites that you create may all act similarly in terms of UI.</p>
+                        </span></div>
+                      </li>
+                      <li>
+                        <div class="collapsible-header"><i class="material-icons">group_add</i>A Small Community</div>
+                        <div class="collapsible-body"><span> <p>Companies such as DroneDeploy, IWB, and Greencode use Materialize. 
+                          Materialize is used for a variety of different sites; mostly for advertising a company's digital services.</p>
+                          <p>There don't seem to be too many large companies that use Materialize.</p>
+                        </span></div>
+                      </li>
+                    </ul>
+              </div>
+              <div class="col s12 m6 l6">
+                <h4 style="color: #484848; text-align: center;" class="flow-text">Flask</h4>
+                  <ul class="collapsible popout">
+                      <li>
+                        <div class="collapsible-header"><i class="material-icons">favorite_border</i>Alive and Kickin'</div>
+                        <div class="collapsible-body"><span>Flask is pretty popular amongst Python users. In 2018, Flask was voted
+                          most popular Python web framework in the <a href ="https://www.jetbrains.com/research/python-developers-survey-2018/">Python Developers Survey 2018.</a>
+                          However, Django, Ruby on Rails, and other web frameworks continuously rank about Flask.
+                        </span></div>
+                      </li>
+                      <li>
+                        <div class="collapsible-header"><i class="material-icons">extension</i>All Around Reliable</div>
+                        <div class="collapsible-body"><span>Flask is easy to pick up and use for simple projects. It doesn't take too many lines
+                          of code to do what you want to do, so your codebase may be smaller than, for example, Django. Database integration is easy, 
+                          and it has high scalability.
+                        </span></div>
+                      </li>
+                      <li>
+                        <div class="collapsible-header"><i class="material-icons">settings</i>Not Meant for Big Things?</div>
+                        <div class="collapsible-body"><span>There seems to be some discourse in the community where some say that Flask is not suited for big projects.
+                          However, there are others that claim that this is a myth. <br><br>
+                          There's also no login functionality, admin site,
+                          and no default web template engines. You must build everything yourself. 
+                        </span></div>
+                      </li>
+                      <li>
+                        <div class="collapsible-header"><i class="material-icons">public</i>Mr.Worldwide</div>
+                        <div class="collapsible-body"><span>Some sites that utilize Flask are Pinterest, LinkedIn, Reddit, Uber, Netflix, and Airbnb.
+                          Uses include everything from social media apps, blogs, and streaming services.
+                        </span></div>
+                      </li>
+                    </ul>
+              </div>
+          </div>
+      </div>
+  
       
-        <div class="row">
-            <div class="col s6">
-                <h2 style="text-align: center; font-size: 4vw; padding-bottom: 50px;">Frontend framework:<br> 
-                    Materialize</h2>
-            <div class="container">
-                <div class="row">
-                    <div class="card small">
-                        <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="{{ url_for('static', filename='img/Materialize_CSS.png') }}">
-                        </div>
-                        <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4"><b>Popularity</b><i class="material-icons right">more_vert</i></span>
-                        <p>Click image to open</p>
-                        </div>
-                        <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">A CSS framework made by Google<i class="material-icons right">close</i></span>
-                        <p>Materalize is mostly used in the United States. According to the <a href="https://2019.stateofcss.com/technologies/css-frameworks/">State of CSS report 2019,</a> 72% of those surveyed had heard of Materialize, and 37% were interested in using it.</p>
-                        <p>It was overall ranked 3rd in terms of popularity -- being beaten out by Bootstrap and Foundation. However, only 17.1% of developers say they would use it again, compared to 45% for Bootstrap.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                  <div class="card small">
-                    <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator" src="{{ url_for('static', filename='img/web-design.jpg') }}">
-                    </div>
-                    <div class="card-content">
-                    <span class="card-title activator grey-text text-darken-4"><b>Strengths</b><i class="material-icons right">more_vert</i></span>
-                    </div>
-                    <div class="card-reveal">
-                    <span class="card-title grey-text text-darken-4">Easy and efficient<i class="material-icons right">close</i></span>
-                    <p>The built-in custom components make for easy and fast development. There are many free plugins for drop-downs, collapses and more. The framework is also very responsive, and makes for a great user experience.</p>
-                    <p>Overall, Materalize is easy to pick up, with great built-in features, and ready-to-use page elements.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="card small">
-                    <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator" src="{{ url_for('static', filename='img/website-setting.png') }}">
-                    </div>
-                    <div class="card-content">
-                    <span class="card-title activator grey-text text-darken-4"><b>Weaknesses</b><i class="material-icons right">more_vert</i></span>
-                    </div>
-                    <div class="card-reveal">
-                    <span class="card-title grey-text text-darken-4">New, small, limited<i class="material-icons right">close</i></span>
-                    <p>Materialize does not work on older browsers, such as anything older than Internet Explorer 10. In addition, the framework has a smaller community with less detailed documentation and forums.</p>
-                    <p>Designs are also fairly limited; websites that you create may all act similarly in terms of UI.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="card small">
-                    <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator" src="{{ url_for('static', filename='img/browser.png') }}" style="height:200px;">
-                    </div>
-                    <div class="card-content">
-                    <span class="card-title activator grey-text text-darken-4"><b>Where it's used</b><i class="material-icons right">more_vert</i></span>
-                    </div>
-                    <div class="card-reveal">
-                    <span class="card-title grey-text text-darken-4">A small community<i class="material-icons right">close</i></span>
-                    <p>Companies such as DroneDeploy, IWB, and Greencode use Materialize. Materialize is used for a variety of different sites; mostly for advertising a company's digital services.</p>
-                    <p>There don't seem to be too many large companies that use Materialize.</p>
-                    </div>
-                  </div>
-                </div>
-            </div>
-            </div>
-
-          
-            <div class="col s6">
-                <h2 style="text-align: center; font-size: 4vw; padding-bottom: 50px;">Backend framework:<br>
-                    Flask</h2>
-                <div class="container">
-                  <div class="row">
-                    <div class="card small">
-                      <div class="card-image waves-effect waves-block waves-light">
-                      <img class="activator" src="{{ url_for('static', filename='img/flask.png') }}" style="height: 200px;">
-                      </div>
-                      <div class="card-content">
-                      <span class="card-title activator grey-text text-darken-4"><b>Popularity</b><i class="material-icons right">more_vert</i></span>
-                      <p>Click image to open</p>
-                      </div>
-                      <div class="card-reveal">
-                      <span class="card-title grey-text text-darken-4">Still alive and kickin'<i class="material-icons right">close</i></span>
-                      <p>According to the Stack Overflow Developer Survey 2020, Ruby was named the <a href="https://insights.stackoverflow.com/survey/2020">14th most popular</a> programming language in the world. There are over <a href="https://trends.builtwith.com/framework/Ruby-on-Rails">1M live websites</a> that are currently using Ruby on Rails.</p>
-                      <p>It is one of the more popular choices for startups, however, Ruby on Rail's popularity may be falling somewhat, in the face of other frameworks such as node.js.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="card small">
-                      <div class="card-image waves-effect waves-block waves-light">
-                      <img class="activator" src="{{ url_for('static', filename='img/strength.png') }}">
-                      </div>
-                      <div class="card-content">
-                      <span class="card-title activator grey-text text-darken-4"><b>Strengths</b><i class="material-icons right">more_vert</i></span>
-                      </div>
-                      <div class="card-reveal">
-                      <span class="card-title grey-text text-darken-4">All around reliable<i class="material-icons right">close</i></span>
-                      <p>The language is clear, simple, and easy to learn, making for speedy development. People were finding they spent less time writing less code, while still retaining functionality. The community is also large, with vast amounts of resources to fall back on.</p>
-                      <p>It also has high data protection with extra steps taken to prevent SQL injection and other attacks.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="card small">
-                      <div class="card-image waves-effect waves-block waves-light">
-                      <img class="activator" src="{{ url_for('static', filename='img/weakness.jpg') }}">
-                      </div>
-                      <div class="card-content">
-                      <span class="card-title activator grey-text text-darken-4"><b>Weaknesses</b><i class="material-icons right">more_vert</i></span>
-                      </div>
-                      <div class="card-reveal">
-                      <span class="card-title grey-text text-darken-4">Slow and steady<i class="material-icons right">close</i></span>
-                      <p>Ruby on Rails has much slower average runtimes compared to other languages. This could be detrimental, as according to a <a href="https://think.storage.googleapis.com/docs/mobile-page-speed-new-industry-benchmarks.pdf">Google study,</a> each second delay will decrease the number of page views.</p>
-                      <p>Developers may also find an issue with the language's lack of flexibility, as you may need to go out of your way for unique customization.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="card small">
-                      <div class="card-image waves-effect waves-block waves-light">
-                      <img class="activator" src="{{ url_for('static', filename='img/many_webs.png') }}">
-                      </div>
-                      <div class="card-content">
-                      <span class="card-title activator grey-text text-darken-4"><b>Where it's used</b><i class="material-icons right">more_vert</i></span>
-                      </div>
-                      <div class="card-reveal">
-                      <span class="card-title grey-text text-darken-4">Mr. Worldwide<i class="material-icons right">close</i></span>
-                      <p>Ruby on Rails is vastly popular in startups, due to its ease of use. Company giants that utilize it include GitHub, Shopify, Netflix, and Twitter. Uses include everything from e-commerce, to open-source libraries, to social media platforms.</p>
-                      <p>Many big-name companies use Ruby on Rails, with possibly more to crop up.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-            </div>
-        </div>
-    
-        <!--JavaScript at end of body for optimized loading-->
-
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+      <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
       <script type="text/javascript" src="{{ url_for('static', filename='js/materialize.min.js') }}"></script>
       <script>
           $(document).ready(function(){
             $('.sidenav').sidenav();
+            $('.scrollspy').scrollSpy();
+            $('.tooltipped').tooltip();
+            $('.tabs').tabs();
+            $('.collapsible').collapsible();
           })
       </script>
     </body>

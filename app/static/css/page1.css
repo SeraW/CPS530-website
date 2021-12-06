@@ -1,10 +1,4 @@
 
-.card img {
-    max-height: 200px;
-    object-fit: cover;
+.collapsible-body{
+    background-color: white;
 }
-.card img.materialized.active {
-    max-height: none;
-    object-fit: none;
-}
-
